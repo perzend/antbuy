@@ -1,0 +1,343 @@
+/*Общие начальные настройки*/
+body{
+    width: 960px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    font-family: Verdana, sans-serif;
+}
+
+p{
+    text-indent: 1.5em;
+    text-align: justify;
+}
+p:first-letter {
+    color: red;
+    font-size: 30px;
+}
+
+/*Блок заголовка*/
+.header{
+    border: 2px ridge orange;
+    border-radius: 20px;
+    height: 80px;
+    padding: 10px;
+    background-image: url(img/ant_head.gif);
+    margin-top: 5px;
+    
+}
+
+.logo{
+    border: 2px dotted green;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50px;
+    height: 80px;
+    float:left;
+    margin-left: 10px;
+}
+
+.block_menu{
+   
+    width: 600px;
+    height: 60px;
+    padding: 10px;
+    margin-left: auto;
+}
+
+.menu_list{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+}
+.menu_list li{
+    list-style-type: none;
+    width: 180px;
+    height: 56px;
+    border: 2px dotted green;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+          
+}
+
+.menu_list li a{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    text-decoration-line: none;
+    color: green;
+    font-size: 20px;
+    align-items: center;
+}
+
+
+.menu_list li ul{
+    display: none;
+    flex-direction: column;
+    padding: 0;
+}
+.menu_list li ul li{
+   
+    height: 28px;
+    border: 2px dotted green;
+    border-radius: 20px;
+    background-color: beige;
+    
+}
+
+.menu_list li ul li a{
+    display: flex;
+    font-size: 16px;
+     
+    
+    text-decoration-line: none;
+    
+    
+}
+
+.menu_list li:hover ul{
+    display:flex;
+   
+        
+}
+
+.menu_list li a:hover {
+    color: yellowgreen;
+    font-weight: 600;
+}
+
+.menu_list li a:hover:before {
+    content: ">";
+    color: yellowgreen;
+}
+
+.menu_list li a:hover:after {
+    content: "<";
+    color: yellowgreen;
+}
+
+
+.container{
+    border: 2px ridge orange;
+    border-radius: 20px;
+    min-height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.content{
+    margin: 0 auto;
+    width: 600px;
+     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    
+}
+
+.footer{
+    height: 50px;
+    border: 2px ridge orange;
+    border-radius: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: right;
+    background-image: url(img/ant_head.gif);
+    font-size: 14px;
+    font-style: italic;
+    padding-top: 18px;
+    padding-right: 180px;
+    margin-bottom: 5px;
+}
+
+/*Для основных заголовков h1*/
+
+.title_h1 {
+    color: darkslategrey;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+/*Для заголовков h2*/
+
+.title_h2 {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #eaeaea;
+}
+
+/*Блок краткое описание*/
+
+.sdesc_prod {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.add_in_basket{
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    background-color: cornsilk;
+    display: none;
+    
+    
+}
+
+.button_buy{
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+.button_buy:hover{
+    background-color:skyblue;
+    color: aliceblue;
+}
+.button_buy:active{
+    background-color:green;
+    color: red;
+}
+
+/*Блок подробное описание*/
+
+.fdesc_prod {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.sdesc_prod:first-letter,
+.fdesc_prod:first-letter {
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+}
+
+
+/*Блок характеристик*/
+
+.prop_prod {
+    color: #123456;
+    font-size: 1em;
+    font-style: oblique;
+    font-family: "Comic Sans MS";
+    line-height: 20px;
+    list-style-image: url(img/ant_marker.jpg);
+}
+
+
+/*Блок инфо для заказа*/
+
+.info_order_prod {
+    font-size: 1em;
+    font-family: "Tahoma", serif;
+    line-height: 20px;
+    list-style-type: decimal-leading-zero;
+}
+
+
+/*Стиль для полей ввода */
+
+.in_put_usr,
+.in_put_textarea {
+    font-size: 12px;
+    font-style: italic;
+    width: 300px;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.in_put_textarea {
+    height: 125px;
+}
+
+.in_put_usr[type=email]:focus {
+    background-color: yellow;
+    color: cornflowerblue;
+}
+
+.in_put_usr[type="text"] {
+    text-transform: capitalize;
+}
+
+
+/*Рамка для картинок*/
+
+.bord_img_prod {
+    margin: 25px;
+    outline: #ADFF2F solid 5px;
+    outline-offset: 10px;
+   float: left;
+}
+
+.bord_img_prod:hover {
+    
+    outline: #f8f8f8 solid 5px;
+   
+}
+
+.catalog{
+    
+    text-align: center;
+    
+}
+
+.catalog img{
+   margin: 10px;
+    width: 160px;
+    display: inline-block; 
+    vertical-align: middle;
+    
+}
+.catalog img:hover{
+    outline: #AD8F2F dashed 5px;
+    outline-offset: 5px;
+}
+
+/*Основные стили для таблицы*/
+
+.newtable {
+    border: 2px solid green;
+    width: 100%;
+    border-spacing: 10px;
+    border-collapse: collapse;
+}
+
+.newtable td {
+    border: 1px solid black;
+    padding-left: 10px;
+    vertical-align: middle;
+    text-align: center;
+    height: 20px;
+}
+
+
+/*Стили и выравнивание для блоков адрес и обратная связь*/
+
+.block {
+    vertical-align: top;
+    display: inline-block;
+    margin: 2px;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+.block2 {
+    vertical-align: top;
+    display: inline-block;
+    width: 325px;
+    margin: 5px;
+}
+
